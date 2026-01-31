@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
-import { FaWhatsapp, FaXTwitter } from 'react-icons/fa6'; // Updated to Fa6 for the new X icon
+import { FaWhatsapp, FaXTwitter } from 'react-icons/fa6';
 import { HiOutlineMenuAlt3, HiX } from 'react-icons/hi';
 import { siteConfig } from '../../data/servicesData';
 
@@ -37,9 +37,11 @@ const Header = () => {
   return (
     <header
       className={`fixed top-0 w-full z-[100] transition-all duration-500 ease-in-out ${
-        scrolled 
-          ? 'py-4 bg-white/80 backdrop-blur-lg border-b border-zinc-200/50 shadow-sm' 
-          : 'py-8 bg-transparent'
+        open 
+          ? 'py-4 bg-white' // Solid white when menu is open
+          : scrolled 
+            ? 'py-4 bg-white/80 backdrop-blur-lg border-b border-zinc-200/50 shadow-sm' 
+            : 'py-8 bg-transparent'
       }`}
     >
       <div className="container mx-auto px-6 md:px-12 flex items-center justify-between">
@@ -49,16 +51,11 @@ const Header = () => {
           <div className={`transition-colors duration-500 font-bold text-2xl tracking-tighter ${
             open || (scrolled || !isHome) ? 'text-zinc-900' : 'text-white'
           }`}>
-            N<span className="font-light italic">R</span>
+            BLUE<span className="font-light italic">RENTAL</span>
           </div>
           <div className={`h-4 w-px transition-colors duration-500 ${
             open || (scrolled || !isHome) ? 'bg-zinc-200' : 'bg-white/30'
           }`} />
-          <span className={`text-[10px] uppercase tracking-[0.4em] font-medium transition-colors duration-500 ${
-            open || (scrolled || !isHome) ? 'text-zinc-500' : 'text-white/80'
-          }`}>
-            Lagos
-          </span>
         </Link>
 
         {/* Desktop Navigation */}
@@ -106,8 +103,10 @@ const Header = () => {
       </div>
 
       {/* Full-Screen Mobile Menu */}
-      <div className={`fixed inset-0 bg-white transition-transform duration-700 ease-[cubic-bezier(0.85,0,0.15,1)] ${
-        open ? 'translate-y-0' : '-translate-y-full'
+      <div className={`fixed inset-0 bg-white transition-all duration-700 ease-[cubic-bezier(0.85,0,0.15,1)] ${
+        open 
+          ? 'translate-y-0 opacity-100 visible pointer-events-auto' 
+          : '-translate-y-full opacity-0 invisible pointer-events-none'
       }`}>
         <div className="h-full flex flex-col justify-between px-10 py-20">
           
@@ -148,7 +147,6 @@ const Header = () => {
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </header>

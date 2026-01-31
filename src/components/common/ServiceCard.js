@@ -17,6 +17,10 @@ const ServiceCard = ({ service, type }) => {
 
   return (
     <div className="group relative bg-white transition-all duration-500">
+      <Link 
+              to={`/${type}/${service.slug}`}
+              className="text-zinc-400 hover:text-zinc-900 transition-colors"
+             >
       {/* Image Container */}
       <div className="relative aspect-[4/5] overflow-hidden rounded-sm bg-zinc-100">
         <img
@@ -96,6 +100,7 @@ const ServiceCard = ({ service, type }) => {
           </div>
         </div>
       </div>
+      </Link>
     </div>
   );
 };

@@ -141,20 +141,20 @@ export const services = {
 };
 
 export const siteConfig = {
-  companyName: 'Elite Naija Rentals',
+  companyName: 'BLUE RENTAL SERVICES',
   phone: '+2348012345678',
   whatsapp: '+2348012345678',
-  email: 'bookings@elitenaijarentals.com',
+  email: 'bookings@bluerental.com',
   address: 'Victoria Island, Lagos, Nigeria',
   social: {
-    facebook: 'https://facebook.com/elitenaijarentals',
-    instagram: 'https://instagram.com/elitenaijarentals',
-    twitter: 'https://twitter.com/elitenaijarentals'
+    facebook: 'https://facebook.com/bluerental',
+    instagram: 'https://instagram.com/bluerental',
+    twitter: 'https://twitter.com/bluerental'
   },
   seo: {
-    defaultTitle: 'Elite Naija Rentals | Premium Rental Services in Nigeria',
+    defaultTitle: 'BLUE RENTAL SERVICES | Premium Rental Services in Nigeria',
     defaultDescription: 'Luxury apartment, car, boat, and executive services rental in Nigeria. Premium quality, professional service.',
     keywords: 'Nigeria rental, Lagos apartments, luxury cars Nigeria, yacht charter Lagos, executive security Nigeria',
-    siteUrl: 'https://elitenaijarentals.com'
+    siteUrl: 'https://bluerental.com'
   }
 };

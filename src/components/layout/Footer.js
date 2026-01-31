@@ -16,9 +16,9 @@ const Footer = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 mb-24">
           <div className="lg:col-span-5">
             <div className="text-3xl font-bold tracking-tighter mb-6">
-              N<span className="font-light italic">R</span>
+              BLUE<span className="font-light italic">RENTAL</span>
               <span className="text-[10px] uppercase tracking-[0.4em] font-medium text-zinc-500 ml-4 border-l border-zinc-800 pl-4">
-                Lagos
+                
               </span>
             </div>
             <p className="text-zinc-400 text-lg font-light leading-relaxed max-w-md">
@@ -95,7 +95,7 @@ const Footer = () => {
           </div>
 
           <div className="flex items-center space-x-6 text-[10px] uppercase tracking-widest text-zinc-600 font-medium">
-            <span>&copy; {currentYear} NR Lagos</span>
+            <span>&copy; {currentYear} BLUE RENTAL SERVICES</span>
             <span className="hidden md:block h-px w-8 bg-zinc-800"></span>
             <span className="hover:text-zinc-400 cursor-pointer transition-colors">Terms</span>
             <span className="hover:text-zinc-400 cursor-pointer transition-colors">Privacy</span>
